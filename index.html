@@ -15,21 +15,25 @@
     </head>
 
     <body>
-        <div class="head z-depth-2">
-            <div class="container">
-                <nav class="white">
-                    <div class="nav-wrapper">
-                        <a href="#!" class="brand-logo black-text">Sudheesh Shetty</a>
-                        <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
-                        <ul class="side-nav" id="mobile-demo">
-                            <li><a href="sass.html">Sass</a></li>
-                            <li><a href="badges.html">Components</a></li>
-                            <li><a href="collapsible.html">Javascript</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+        <header>
+            <div class="navbar-fixed">
+                <nav class="white z-depth-1">
+                    <div class="container nav-wrapper">
+                        <a href="#!" class="brand-logo black-text"><b>Sudheesh Shetty</b></a>
+                        <a data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
                     </div>
                 </nav>
             </div>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        
+        <div class="head z-depth-1">
+
             <div class="top-color">
             </div>
             <div class="row">
@@ -37,10 +41,10 @@
                     <div class=" container  row">
                         <div class="col s12">
                             <ul class="tabs tabs-transparent hide-on-med-and-down">
-                                <li class="tab col s3 "><a class="active black-text"  href="#about">About</a></li>
-                                <li class="tab col s3 "><a class="black-text" href="#test2">Test 2</a></li>
-                                <li class="tab col s3 "><a class="black-text" href="#test3">Disabled Tab</a></li>
-                                <li class="tab col s3 "><a class="black-text" href="#contact">Contact</a></li>
+                                <li class="tab col s3 "><a class="active black-text"  href="#about"><b>About</b></a></li>
+                                <li class="tab col s3 "><a class="black-text" href="#project"><b>Projects</b></a></li>
+                                <li class="tab col s3 "><a class="black-text" href="#expertise"><b>Expertise</b></a></li>
+                                <li class="tab col s3 "><a class="black-text" href="#contact"><b>Contact</b></a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,11 +68,207 @@
             </div>
 
             <div class="col m9 s12 pages z-depth-1">
-                <div class="content col s12 m12" id="about" >
-                    <p>about</p>
-                </div>
-                <div class="container center" id="contact">
+                <div class="container center about col s12 m12" id="about" >
+                    <br/>  
                     <br/>
+                    <h3 class="designation ">About</h3>
+                    <hr/>
+                    <div class="about-text">
+                        <p>Hi, my name is <span class="imp">Sudheesh Shetty</span>. I am from Mangalore. I finished my education there. I always loved technologies. But I was not a guy who explores. I was introduced to <span class="imp">Free Software Movement Karnataka(FSMK)</span> in 2012 which is when I was taught to explore things and learn on my own. I was introduced to <span class="imp">open source technologies</span> there. It was kind of turning point in my life </p>
+                        <p>I finished my Engineering from Vivekananda College of Engineering and Technology, Puttur under Visveshwaraya Technology in the year 2104. I started working in <span class="imp">Persistent Systems Ltd</span>, Pune from Nov 2014. Started as a backend developer there and later was introduced to full stack development. I love working on my free time and to explore new things in the technologies I learnt. I built few projects during my part time which is always available on github.  I also started writing about what I learnt. I have always been part of FSMK camps later mentoring new students and helping them to find their interest in technology. </p>
+                        <p>I am that guy who also likes to keep myself fit. I do gym and exercises to keep myself fit. Tripping and trecking are the things that no one would hate and neither do I. I have been to many places with my friends. If some one is speaking of technology, Open Source that would definetly take my attention.</p>
+                    </div>
+                </div>
+
+                <div class="container center project col s12 m12" id="project">
+                    <br/>  
+                    <br/>
+                    <h3 class="designation ">Projects</h3>
+                    <hr/>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/teen.png">
+
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title black-text">Teen Protocol</span>
+                                    <p>Teen is energy efficient Adhoc routing protocol.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">More.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/bus.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Bus Tracker</span>
+                                    <p>It is a sloution to the user to track their bus.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/chat.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Chat</span>
+                                    <p>This is a chat application that can be used for local usage in a small network. </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">More.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/chat.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Chat</span>
+                                    <p>This is a chat application that can be used for local usage in a small network. </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">More.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/teen.png">
+
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title black-text">Teen Protocol</span>
+                                    <p>Teen is energy efficient Adhoc routing protocol.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">More.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container center expertise col s12 m12" id="expertise">
+                    <br/>  
+                    <br/>
+                    <h3 class="designation ">Expertise</h3>
+                    <hr/>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>HTML</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="100" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="80" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Node.js</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="80" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Javascript</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="70" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Angular.js</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="75" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="90" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Materialize.css</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="90" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mongo.db</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="80" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MySQL</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="60" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Socket.io</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="75" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="65" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pearl</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="65" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>React.js</td>
+                                <td><p class="range-field">
+                                    <input type="range" id="test5" value="85" disabled/>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container contact center col s12 m12" id="contact">
+                    <br/>  
                     <br/>
                     <h3 class="designation ">Contact</h3>
                     <hr/>
@@ -101,12 +301,14 @@
 
             </div>
         </div>
+
+
         <footer class="page-footer z-depth-1">
             <div class="footer-copyright">
                 <div class="container row">
                     <a class="col s4 right white-text" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /><br />This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</a>
                     <p class="col s8">
-                        Sudheesh Shetty © 2016. All rights reserved.
+                        © 2016-17 Sudheesh Shetty, All rights reserved.
                     </p>
                 </div>
             </div>

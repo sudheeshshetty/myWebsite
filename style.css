@@ -23,9 +23,12 @@ nav {
 .head{
     height:auto;
 }
+.shadow{
+    box-shadow: 0 5px 7.5px 0 #454647 !important;
+}
 .top-color{
     height:250px;
-    background-color: deepskyblue;
+    background-color: #1da1f2;
 }
 
 .profile-pic {
@@ -35,19 +38,20 @@ nav {
     margin-left:20px;
 }
 
-.profile-details, .content{
+.profile-details, .about{
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
 }
-
 .over{
     position: relative;
     top:-120px !important;
 }
 .pages{
     position:relative;
-    top:0px;
+    min-height: 600px !important;
+    box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+    z-index:-1;
 }
 .tabs .indicator { background-color: black !important; }
 
@@ -56,11 +60,27 @@ nav {
     position:relative; 
     top:150px;
 }
+.about-text{
+    font-family: 'Ubuntu';
+    font-size: 1.68rem;
+    font-weight: 500;
+}
+
+.imp{
+    color:#1da1f2;
+    font-weight: 600;
+}
+
+html {
+    font-family: "Roboto", sans serif;
+    font-weight: 300;
+}
+
 @media screen and (max-width: 600px) {
     .details{
         position:relative;
     }
-    .content{
+    .about{
         position:relative;
     }
 }
@@ -77,6 +97,22 @@ nav {
 @media screen and (max-width:600px){
     .pages{
         top:-120px !important;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    .about{
+        display: block !important;
+    }
+    .contact{
+        display: block !important;
+    }
+    .project{
+        display: block !important;
+    }
+    .expertise{
+        display: block !important;
     }
 }
 
@@ -114,5 +150,6 @@ nav {
 
 .page-footer{
     padding:0px;
-    background-color: deepskyblue;
+    background-color: #1da1f2;
+    box-shadow: 0 -2px 7.5px 0 #454647;
 }
