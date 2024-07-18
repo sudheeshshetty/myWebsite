@@ -5,14 +5,18 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CircleOutlineIcon from '@mui/icons-material/CircleOutlined';
-import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
+
 
 export default function Skills() {
-    const listIconCss={ fontSize: '10px', paddingRight: '0px', minWidth: '50px', color:"#9cbff7" }
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const listIconCss = { fontSize: '10px', paddingRight: '0px', minWidth: '50px', color: "#9cbff7" }
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', width: "100%" }}>
             {/* Title with User Icon */}
-            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: '66%' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: isMobile ? '90%' : '66%' }}>
 
                 <FlashOnOutlineIcon sx={{ fontSize: 48, marginRight: '10px', color: 'grey' }} />
                 <Typography variant="h5" component="div" sx={{ fontWeight: '500', fontFamily: 'Roboto, sans-serif' }}>
@@ -20,14 +24,14 @@ export default function Skills() {
                 </Typography>
             </Box>
             {/* <Box sx={{ display: 'flex', alignItems: 'flex-end', width: '60%', marginBottom: '50px' }}> */}
-            <Card variant="outlined" sx={{ width: '60%' }}>
+            <Card variant="outlined" sx={{ width: isMobile ? '90%' : '60%' }}>
                 <CardContent>
-                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', }}>
-                        <span style={{ width: '50%' }}>
+                    <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'center', }}>
+                        <span style={{ width: isMobile ? '100%' : '50%' }}>
                             <List>
                                 <ListItem>
                                     <ListItemIcon>
-                                        <CircleOutlineIcon sx={{...listIconCss }} />
+                                        <CircleOutlineIcon sx={{ ...listIconCss }} />
                                     </ListItemIcon>
                                     <ListItemText sx={{ marginLeft: '0px' }}>
                                         <Typography><span style={{ fontWeight: 'bold' }}>AWS: </span>Lambda, S3, CloudWatch, EC2, Dynamo, Code Pipeline, Code Build, IAM, ECS, Fargate, API Gateway, SNS, Athena, Event Bridge, Knowledge Base, BedRock, SQS, Route53, VPC, RUM, Dashboards, X-ray</Typography>

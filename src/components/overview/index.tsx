@@ -4,14 +4,16 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 
 export default function Overview() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', width: "100%" }}>
             {/* Title with User Icon */}
-            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: '66%' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: isMobile ? '90%' : '66%' }}>
 
                 <BadgeOutlinedIcon sx={{ fontSize: 48, marginRight: '10px', color: 'grey' }} />
                 <Typography variant="h6" component="div" sx={{ fontWeight: '500' }}>
@@ -20,8 +22,8 @@ export default function Overview() {
             </Box>
 
             {/* Card below Title */}
-            <Box sx={{ display: 'flex', alignItems: 'flex-start', width: '60%' }}>
-                <Card variant="outlined" sx={{ width: '50%', position: 'relative' }}>
+            <Box sx={{ display: 'flex', alignItems: 'flex-start', width: isMobile ? '90%' : '60%' }}>
+                <Card variant="outlined" sx={{ width: isMobile ? '100%' : '55%', position: 'relative' }}>
                     <Box
                         sx={{
                             position: 'absolute',

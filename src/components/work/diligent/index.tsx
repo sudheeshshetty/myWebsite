@@ -6,8 +6,11 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 export default function Diligent() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [show, setShow] = useState(false);
     const showDescription = () => {
         setShow(!show)
@@ -15,8 +18,8 @@ export default function Diligent() {
 
     const listIconCss={ fontSize: '10px', paddingRight: '0px', minWidth: '50px', color:"#9cbff7" }
     return (
-        <Box sx={{ display: 'flex', alignItems: 'flex-end', width: '60%', marginBottom: '50px' }}>
-            <Card variant="outlined" sx={{ width: '65%' }}>
+        <Box sx={{ display: 'flex', alignItems: 'flex-end', width: isMobile ? '90%' : '60%', marginBottom: '50px' }}>
+            <Card variant="outlined" sx={{ width: isMobile ? '100%' : '65%' }}>
                 <CardContent>
                     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', }}>
                         <WorkOutlineIcon sx={{ fontSize: 30, marginRight: '30px', marginTop: '10px', color: '#2576f7' }} />

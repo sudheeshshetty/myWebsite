@@ -11,12 +11,15 @@ import Mirafra from './mirafra';
 import WebPeople from './webpeople';
 import UpYourGame from './upyourgame';
 import Persistent from './persistent';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 export default function Work() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', width: "100%" }}>
             {/* Title with User Icon */}
-            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: '66%' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', width: isMobile ? '90%' : '66%' }}>
 
                 <WorkOutlineIcon sx={{ fontSize: 48, marginRight: '10px', color:'grey' }} />
                 <Typography variant="h6" component="div" sx={{ fontWeight: '500' }}>
